@@ -14,12 +14,17 @@ public class ContaEspecial extends Conta {
     }
     
     public double getLimite() {
+        return this.limite;
+    }    
+    
+    public double getLimiteDisponivel() {
         if (getSaldo() < 0) {
             return this.limite + getSaldo();
         } else {
             return limite;
         }
-    }    
+    }
+    
     @Override
     public boolean sacar(double valor) {
         if (valor <= getSaldo() + limite) {
@@ -36,8 +41,8 @@ public class ContaEspecial extends Conta {
                 "Número: " + getNumero() + "\n" +
                 "Titular: " + getNomeTitular()+ "\n" +
                 "Saldo: R$ " + getSaldo() + "\n" +
-                "Limite total: R$ " + limite + "\n" +
-                "Limite disponível: R$ " + getLimite() + "\n" +
+                "Limite total: R$ " + getLimite() + "\n" +
+                "Limite disponível: R$ " + getLimiteDisponivel()+ "\n" +
                 "-----------------------";
     }
 }
