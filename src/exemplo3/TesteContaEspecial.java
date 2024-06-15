@@ -3,7 +3,7 @@ package exemplo3;
 public class TesteContaEspecial {
     public static void main(String[] args) {
         ContaEspecial ce = new ContaEspecial(123, "Marcelo", 500);
-        boolean sucesso = ce.sacar(500);
+        boolean sucesso = ce.sacar(100);
         if (sucesso) {
             System.out.println("Saque efetado com sucesso!");
         } else {
